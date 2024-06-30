@@ -7,7 +7,7 @@ from md_noter import md_noter
 from llama_index.core.tools import QueryEngineTool, ToolMetadata
 from llama_index.llms.openai import OpenAI
 from llama_index.core.agent import ReActAgent
-from pdf_reader import canada_engine
+from pdf_reader import ukraine_engine
 
 # loading our api keys
 load_dotenv()
@@ -32,7 +32,7 @@ tools = [
     ),
 
     QueryEngineTool(
-        query_engine=canada_engine,
+        query_engine=ukraine_engine,
         metadata=ToolMetadata(
             name="ukraine_data",
             description="this gives all information about ukraine",
